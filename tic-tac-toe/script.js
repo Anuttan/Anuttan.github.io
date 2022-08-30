@@ -66,14 +66,11 @@ function checkWinner(){
         running = false;
     }
     else if(!options.includes("")){
-        currstatus.textContent = `Draw! - Resetting game in 3 seconds`;
+        currstatus.textContent = `Draw!`;
         running = false;
     }
     else{
         changePlayer();
-    }
-    if (!running){
-        AutoReset();
     }
 }
 
@@ -87,5 +84,4 @@ function resetGame(){
     currstatus.textContent = `${currPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
-
 }
